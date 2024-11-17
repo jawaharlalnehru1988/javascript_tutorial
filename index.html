@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="hoisting.js"></script>
+    <script src="closures.js"></script>
 </head>
 <body>
 
     <h1>Ask Nehru</h1>
+    <button id="btn">click me</button>
+    <script>
+       function outerFunction(){
+        let counter  = 0;
+        document.getElementById('btn')
+        .addEventListener('click', function(){
+            counter++;
+            console.log(counter);
+        })
+    }
+
+    outerFunction();
+    </script>
     
 </body>
 </html>
