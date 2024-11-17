@@ -47,13 +47,13 @@
 // }
 
 
-// function multiplier(x){
-//     return function(y){
-//         return x * y;
-//     }
-// }
+function multiplier(x){
+    return function(y){
+        return x * y;
+    }
+}
 
-// const double = multiplier(2);
-// console.log(double(5));
+const double = multiplier(2);
+console.log(double(5));
 
 
