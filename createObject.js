@@ -131,8 +131,8 @@
 
 
 // Using the Spread Operator
-const obj1 = { name: "Nehru", age: 30, city: "Bangalore" };
+// const obj1 = { name: "Nehru", age: 30, city: "Bangalore" };
 
-const obj2 = { ...obj1, gender: "male" };
+// const obj2 = { ...obj1, gender: "male" };
 
-console.log(obj2.gender);
+// console.log(obj2.gender);
