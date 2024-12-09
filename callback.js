@@ -187,3 +187,43 @@
 
 // obj.printMessage(print.bind(obj));
 
+
+//---------------------------------
+// function executeAsync(callback) {
+//     console.log("Start");
+//     setTimeout(callback, 500);
+//     console.log("End");
+// }
+
+// executeAsync(() => console.log("Callback executed"));
+
+//Simulating an API call with a callback
+
+function fetchUserDataWithCallBack(userId, successCallback, errorCallback) {
+    
+setTimeout(() => {
+    // Simulate API call
+     const mockData = {
+        name: "John Doe", 
+        age: 30,
+        city: "New York"};
+        const isError = false;
+
+    if (!isError) {
+        successCallback(mockData);
+    } else {
+        errorCallback("Error fetching user data");
+    }
+}, 2000);
+
+}
+
+function handleSuccess(data) {
+    console.log("User data:", data);
+}
+
+function handleError(error) {
+    console.error("Error:", error);
+}
+
+fetchUserDataWithCallBack(123, handleSuccess, handleError);
