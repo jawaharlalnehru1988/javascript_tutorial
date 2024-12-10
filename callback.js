@@ -1,7 +1,9 @@
-//Basic Example
+
+ 
+ //Basic Example
 // function greet(name, callback) {
-//     console.log("Hello, " + name + "!");
 //     callback();
+//     console.log("Hello, " + name + "!");
 // }
 
 // function sayGoodbye() {
@@ -199,31 +201,30 @@
 
 //Simulating an API call with a callback
 
-function fetchUserDataWithCallBack(userId, successCallback, errorCallback) {
+// function fetchUserDataWithCallBack(userId, successCallback, errorCallback) {
     
-setTimeout(() => {
-    // Simulate API call
-     const mockData = {
-        name: "John Doe", 
-        age: 30,
-        city: "New York"};
-        const isError = false;
+// setTimeout(() => {
+//     // Simulate API call
+//      const mockData = {
+//         name: "John Doe", 
+//         age: 30,
+//         city: "New York"};
+//         const isError = false;
 
-    if (!isError) {
-        successCallback(mockData);
-    } else {
-        errorCallback("Error fetching user data");
-    }
-}, 2000);
+//     if (!isError) {
+//         successCallback(mockData);
+//     } else {
+//         errorCallback("Error fetching user data");
+//     }
+// }, 2000);
+// }
+// function handleSuccess(data) {
+//     console.log("User data:", data);
+// }
 
-}
+// function handleError(error) {
+//     console.error("Error:", error);
+// }
 
-function handleSuccess(data) {
-    console.log("User data:", data);
-}
+// fetchUserDataWithCallBack(123, handleSuccess, handleError);
 
-function handleError(error) {
-    console.error("Error:", error);
-}
-
-fetchUserDataWithCallBack(123, handleSuccess, handleError);
