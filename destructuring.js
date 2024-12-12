@@ -25,6 +25,19 @@
 // const [first4, [second4, third4], ...rest] = numbers;
 // console.log(first4, second4, third4, rest);
 
+// Destructuring with functions
+// function calculate(...numbers) {
+//     const [first, second, ...rest] = numbers;
+//     console.log(first, second, rest);
+// }
+
+// calculate(1, 2, 3, 4, 5);
+
+// Destructuring to extract only the third element from an array
+// const numbers = [1, 2, 3, 4, 5];
+// const [, , third5] = numbers;
+// console.log(third5);
+
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 
@@ -123,3 +136,18 @@
 // console.log(personName, personAge, personCity, personState, personCountry);
 
 //--------------------------------------------------------------
+
+// Extract only one parameter from an object
+// const person = {
+//     name: "Nehru",
+//     age: 30,
+//     address: {
+//         city: "Bangalore",
+//         state: "Karnataka",
+//         country: "India"
+//     }
+// };
+
+// const {address: myAddress} = person;
+// console.log(myAddress);
+// console.log(myAddress.city);
