@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="callback.js"></script>
+    <script src="callbindapply.js"></script>
 </head>
 <body>
 
     <h1>Ask Nehru</h1>
-    <button id="btn">click me</button>
-    <script>
-       function outerFunction(){
-        let counter  = 0;
-        document.getElementById('btn')
-        .addEventListener('click', function(){
-            counter++;
-            console.log(counter);
-        })
-    }
+    <h1>Debounce Example</h1>
+    <label for="search">Search Posts:</label>
+    <input type="text" id="search" placeholder="Type to search..." />
+    <ul id="results"></ul>
 
-    outerFunction();
-    </script>
+    <button id="myButton">click here</button>
+
+    <script src="debouncing.js"></script>
+    
     
 </body>
 </html>
