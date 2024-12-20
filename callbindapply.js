@@ -161,3 +161,120 @@
 // greet.apply(person, ["Hello", "!"]); // Using apply
 // greet.call(person, "Hello", "!");
 
+//---------------------------------------------------------------
+//---------------------------------------------------------------
+
+// Borrowing methods using bind();
+// const person = {
+//     name: "Alice",
+//     greet: function() {
+//         console.log(`Hello, my name is ${this.name}`);
+//     }
+// };
+
+// const greetFn = person.greet.bind(person);
+// setTimeout(greetFn, 1000);
+
+//---------------------------------------------------------------
+
+// Using bind() with Event Handlers
+
+// class Button {
+//     constructor(text) {
+//         this.text = text;
+//     }
+
+//     clickHandler() {
+//         console.log(`Button clicked: ${this.text}`);
+//     }
+// }
+
+// const myButton = new Button("Submit");
+// const buttonElement = document.querySelector("button");
+
+// buttonElement.addEventListener("click", myButton.clickHandler.bind(myButton));
+
+
+//---------------------------------------------------------------
+
+// const person = {
+//     name: "John",
+//     introduce: function() {
+//         console.log(`Hi, I am ${this.name}`);
+//     }
+// };
+
+// const anotherPerson = { name: "Jane" };
+
+// const introduceJane = person.introduce.bind(anotherPerson);
+// introduceJane();
+
+
+//---------------------------------------------------------------
+
+// Passing Methods to Higher-Order Functions
+
+// const logger = {
+//     prefix: "[LOG]",
+//     log: function(message) {
+//         console.log(`${this.prefix} ${message}`);
+//     }
+// };
+
+// const boundLog = logger.log.bind(logger);
+
+// ["Message 1", "Message 2"].forEach(boundLog);
+
+
+//---------------------------------------------------------------
+
+// In Constructor Functions and classes
+class Counter {
+    constructor() {
+        this.count = 0;
+        this.increment = this.increment.bind(this); // Binding `this` to the instance
+    }
+
+    increment() {
+        this.count++;
+        console.log(this.count);
+    }
+}
+
+const counter = new Counter();
+const incrementFn = counter.increment;
+
+incrementFn(); 
+
+
+//---------------------------------------------------------------
+
+// Using with setTimeout and setInterval
+
+// function Timer() {
+//     this.seconds = 0;
+
+//     setInterval(
+//         function() {
+//             this.seconds++;
+//             console.log(this.seconds);
+//         }.bind(this), // Bind `this` to the Timer instance
+//         1000
+//     );
+// }
+
+// new Timer();
+
+
+//---------------------------------------------------------------
+// Using with Event Listeners
+// const module = {
+//     x: 42,
+//     getX: function() {
+//         return this.x;
+//     }
+// };
+
+// const boundGetX = module.getX.bind(module);
+// console.log(boundGetX()); 
+
