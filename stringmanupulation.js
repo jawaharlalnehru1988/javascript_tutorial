@@ -83,7 +83,7 @@
 
 // let myName = "Krishna kumar";
 
-// console.log(myName.substring(0, 7));
+// console.log(myName.substring(0, 1));
 
 // console.log(myName.substring(3));
 
