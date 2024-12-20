@@ -146,3 +146,26 @@
 // }
 
 // console.log('myMap :', myMap);
+
+//--------------------------------------------------------------------
+// Understanding the WeakMap
+
+// Creating a WeakMap
+// const myWeakMap = new WeakMap();
+// const key1 = {id: 1};
+// const key2 = {id: 2};
+
+// myWeakMap.set(key1, 'John Doe');
+// myWeakMap.set(key2, 'Jane Doe');
+
+// console.log(myWeakMap.get(key1)); // John Doe
+// console.log(myWeakMap.get(key2)); // Jane Doe
+
+// myWeakMap.delete(key1);
+// console.log(myWeakMap.get(key1)); // undefined
+
+// myWeakMap.has(key1);
+// console.log(myWeakMap.has(key1)); // false
+
+
+
