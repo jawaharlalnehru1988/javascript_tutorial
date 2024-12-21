@@ -21,6 +21,18 @@
 // console.log(users);
 
 //--------------------------------------------------
+// imperative approach
+// const users = [
+//     { name: "Alice", active: false },
+//     { name: "Bob", active: false },
+//     ];
+
+//     for (let i = 0; i < users.length; i++) {
+//         users[i].active = true;
+//     }
+//     console.log(users);
+
+//--------------------------------------------------
 // 3. Updating an external variable based on array elements:
 
 // let total = 0;
@@ -48,6 +60,8 @@
 //   };
 
 // person.greetAll(["Hari", "Kumar", "Rahul"]); 
+
+
 
 //--------------------------------------------------
 // 5. Using the this keyword in the callback implicitly:
@@ -214,11 +228,39 @@
   
 //   console.log(userIds);
 
+//--------------------------------------------------
+// imperative approach
+// const users = [
+//     { id: 1, name: 'Alice' },
+//     { id: 2, name: 'Bob' },
+//   ];
+  
+//   const userIds = [];
+  
+//   for (let i = 0; i < users.length; i++) {
+//     userIds.push(users[i].id);
+//     }
+
+//     console.log(userIds);
+
 // --------------------------------------------------
 // 4. Changing Array Structure
 
 // const numbers = [1, 2, 3, 4, 5];
 // const doubledObjects = numbers.map(num => ({ name: num, value : num *3}))
+// console.log(doubledObjects);
+
+
+//--------------------------------------------------
+// imperative approach
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const doubledObjects = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   doubledObjects.push({ number: numbers[i], doubled: numbers[i] * 2 });
+// }
+
 // console.log(doubledObjects);
 
 // --------------------------------------------------
@@ -231,6 +273,18 @@
 //   return { double, triple };
 // });
 // console.log(transformed);
+
+//--------------------------------------------------
+// imperative approach
+// const numbers = [1, 2, 3];
+// const transformed = [];
+// for (let i = 0; i < numbers.length; i++) {
+//   const double = numbers[i] * 2;
+//   const triple = numbers[i] * 3;
+//   transformed.push({ double, triple });
+// }
+// console.log(transformed);
+
 //--------------------------------------------------
 // 6. change key's name in object of array
 // const data = [
@@ -241,6 +295,20 @@
 // const keyupdates = data.map((obj) => {
 //   return {newKey1: obj.oldKey1, newKey2: obj.oldKey2}
 // });
+
+// console.log(keyupdates);
+
+//--------------------------------------------------
+// imperative approach
+// const data = [
+//     { oldKey1: 'value1', oldKey2: 'value2' },
+//     { oldKey1: 'value3', oldKey2: 'value4' },
+//   ];
+
+// const keyupdates = [];
+// for (let i = 0; i < data.length; i++) {
+//   keyupdates.push({ newKey1: data[i].oldKey1, newKey2: data[i].oldKey2 });
+// }
 
 // console.log(keyupdates);
 
@@ -256,26 +324,52 @@
 
 // console.log(newFieldAdded);
 
+//--------------------------------------------------
+// imperative approach
+// const users = [
+//     { name: 'Alice', age: 17 },
+//     { name: 'Bob', age: 22 },
+//     { name: 'Charlie', age: 15 },
+//   ];
+
+// const newFieldAdded = [];
+// for (let i = 0; i < users.length; i++) {
+//   newFieldAdded.push({ ...users[i], balance: users[i].age * 3 });
+// }
+
+// console.log(newFieldAdded);
+
   //--------------------------------------------------
   //  8. extracting specific fields from objects
-  // const products = [
-  //   { id: 1, name: 'Laptop', price: 1000 },
-  //   { id: 2, name: 'Phone', price: 500 },
-  //   { id: 3, name: 'Tablet', price: 300 },
-  // ];
+//   const products = [
+//     { id: 1, name: 'Laptop', price: 1000 },
+//     { id: 2, name: 'Phone', price: 500 },
+//     { id: 3, name: 'Tablet', price: 300 },
+//   ];
   
-  // const productIds = products.map(product => ({
-  //   id: product.id,
-  //   name: product.name
-  // }));
+//   const productIds = products.map(product => ({
+//     id: product.id,
+//     name: product.name
+//   }));
   
-  // console.log(productIds);
+//   console.log(productIds);
 
 //--------------------------------------------------
 // 7. Formatting Strings
 // const names = ['john', 'jane', 'doe'];
 
 // const capitalizedNames = names.map(name => name.at(0).toUpperCase() + name.slice(1));
+
+// console.log(capitalizedNames);
+
+//--------------------------------------------------
+// imperative approach
+// const names = ['john', 'jane', 'doe'];
+
+// const capitalizedNames = [];
+// for (let i = 0; i < names.length; i++) { 
+//   capitalizedNames.push(names[i].charAt(0).toUpperCase() + names[i].slice(1));
+// }
 
 // console.log(capitalizedNames);
 
@@ -292,7 +386,22 @@
 //   });
 //   console.log('averageScore :', averageScore);
 
- 
+
+//--------------------------------------------------
+// imperative approach
+// const data = [
+//     { name: 'Alice', scores: [10, 20, 30] },
+//     { name: 'Bob', scores: [15, 25, 35] },
+//   ];
+
+// const averageScore = [];
+// for (let i = 0; i < data.length; i++) {
+//   const sum = data[i].scores.reduce((acc, num) => acc + num, 0);
+//   const average = sum / data[i].scores.length;
+//   averageScore.push({ name: data[i].name, averageScore: average });
+// }
+
+// console.log(averageScore);
  
 
 //--------------------------------------------------
@@ -308,6 +417,20 @@
 // console.log(combined); 
 // console.log(array1);
 
+//--------------------------------------------------
+// imperative approach
+// const array1 = [1, 2, 3];
+// const array2 = [4, 5, 6];
+
+// const combined = [];
+// for (let i = 0; i < array1.length; i++) {
+//   combined.push(array1[i]);
+// }
+// for (let i = 0; i < array2.length; i++) {
+//   combined.push(array2[i]);
+// }
+
+// console.log(combined);
 
 //--------------------------------------------------
 
@@ -360,12 +483,40 @@
 // console.log('allEven :', allEven);
 
 //--------------------------------------------------
+// imperative approach
+// const numbers = [2, 4, 6, 8];
+
+// let allEven = true;
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 !== 0) {
+//     allEven = false;
+//     break;
+//   }
+// }
+
+// console.log(allEven);
+
+//--------------------------------------------------
 // 2. Checking for a Specific Range
 // const numbers = [10, 15, 20, 25];
 
 // const withinRange = numbers.every((num) => num >= 10 && num <= 30);
 
 // console.log(withinRange); 
+
+//--------------------------------------------------
+// imperative approach
+// const numbers = [2, 10, 15, 20, 25];
+
+// let withinRange = true;
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] < 10 || numbers[i] > 30) {
+//     withinRange = false;
+//     break;
+//   }
+// }
+
+// console.log(withinRange);
 
 //--------------------------------------------------
 // 3. Using Index or Array in the Callback
@@ -380,6 +531,20 @@
 
 // const words = ['apple', 'banana', 'cherry'];
 // const allContainA = words.every((word) => word.includes('a'));
+
+// console.log(allContainA);
+
+//--------------------------------------------------
+// imperative approach
+// const words = ['apple', 'banana', 'cherry'];
+
+// let allContainA = true;
+// for (let i = 0; i < words.length; i++) {
+//   if (!words[i].includes('a')) {
+//     allContainA = false;
+//     break;
+//   }
+// }
 
 // console.log(allContainA);
 
