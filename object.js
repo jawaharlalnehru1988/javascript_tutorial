@@ -71,20 +71,20 @@
 //Object.seal() - Prevents modifications to existing properties, but allows the addition of new properties.
 
 
-// const obj = { name: "Ram", age: 30 };
-// console.log('obj :', obj);
+const obj = { name: "Ram", age: 30 };
+console.log('obj :', obj);
 
-// Object.seal(obj);
+Object.seal(obj);
 
-// obj.age = 35; 
-// console.log(obj.age); 
-// console.log('obj :', obj);
+obj.age = 35; 
+console.log(obj.age); 
+console.log('obj :', obj);
 
-// obj.city = "Bangalore"; 
-// console.log(obj.city); 
+obj.city = "Bangalore"; 
+console.log(obj.city); 
 
-// delete obj.name; 
-// console.log(obj.name); 
+delete obj.name; 
+console.log(obj.name); 
 
 
 //---------------------------------------------------------------

@@ -1,19 +1,17 @@
 // let promise = new Promise((resolve, reject) => {
-//         let success = true;
+//     let success = true;
 //     if(success){
 //         resolve("successfully load");
 //     } else {
-//         reject("some error occured")
+//         reject(new Error("some error occurred"));
 //     }
 // });
 
-// promise.then( result =>{
-// console.log('result :', result);
-    
-// }).catch(error =>{
-// console.log('error :', error);
-
-// })
+// promise.then(result => {
+//     console.log('result :', result);
+// }).catch(error => {
+//     console.log('error :', error.message);
+// });
 
 //Example 2:  Chaining Promises
 
@@ -57,6 +55,7 @@
 // const promise1 = Promise.resolve(10);
 // const promise2 = Promise.resolve(20);
 // const promise3 = Promise.resolve(30);
+// // const promise4 = Promise.reject("Error");
 
 // Promise.all([promise1, promise2, promise3]).then(results =>{
 // console.log('results :', results);
@@ -95,7 +94,7 @@
 // console.log('results :', results);
 // });
 
-//Example 7: Promise.resolve and Promise.reject
+// Example 7: Promise.resolve and Promise.reject
 // Promise.resolve creates a promise that is already resolved
 
 // Promise.resolve("Resolve Immediately").then(result => console.log(result));
@@ -105,18 +104,27 @@
 //Example 8. Combining Async/Await with Promises
 // async/ await is a cleaner way to work with promises
 
-// function fetchData(){
-//     return new Promise(resolve =>{
-//         setTimeout(()=>{
-//             resolve("Fetched Data");
-//         }, 1000)
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const success = true; // Simulate success or failure
+//             if (success) {
+//                 resolve("Fetched Data");
+//             } else {
+//                 reject("Error fetching data");
+//             }
+//         }, 1000);
 //     });
 // }
 
 // async function main() {
 //     console.log("starts");
-//     const data = await fetchData();
-//     console.log('data :', data);
+//     try {
+//         const data = await fetchData();
+//         console.log('data :', data);
+//     } catch (error) {
+//         console.error('error :', error);
+//     }
 //     console.log("end");
 // }
 
