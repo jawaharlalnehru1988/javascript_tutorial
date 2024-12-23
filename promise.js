@@ -1,17 +1,17 @@
-// let promise = new Promise((resolve, reject) => {
-//     let success = true;
-//     if(success){
-//         resolve("successfully load");
-//     } else {
-//         reject(new Error("some error occurred"));
-//     }
-// });
+let promise = new Promise((resolve, reject) => {
+    let success = true;
+    if(success){
+        resolve("successfully load");
+    } else {
+        reject(new Error("some error occurred"));
+    }
+});
 
-// promise.then(result => {
-//     console.log('result :', result);
-// }).catch(error => {
-//     console.log('error :', error.message);
-// });
+promise.then(result => {
+    console.log('result :', result);
+}).catch(error => {
+    console.log('error :', error.message);
+});
 
 //Example 2:  Chaining Promises
 

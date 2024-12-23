@@ -1,29 +1,29 @@
 // basic usage of nee Set() method
-// const uniqueNumbers = new Set([1, 2, 2, 3, 4, 4, 5]);
+const uniqueNumbers = new Set([1, 2, 2, 3, 4, 4, 5]);
 
 // Adding elements to a Set
-// uniqueNumbers.add(6);
+uniqueNumbers.add(6);
 
 //--------------------------------------------------------------------
 
 //Checking if an element exists in a Set
-// console.log(uniqueNumbers.has(2)); 
+console.log(uniqueNumbers.has(2)); 
 
 //--------------------------------------------------------------------
 
 //Removing an element from a Set
-// uniqueNumbers.delete(2);
+uniqueNumbers.delete(2);
 
 //--------------------------------------------------------------------
 
 //Clearing all elements from a Set
 // uniqueNumbers.clear();
-// console.log('uniqueNumbers :', uniqueNumbers);
+console.log('uniqueNumbers :', uniqueNumbers);
 
 //--------------------------------------------------------------------
 
 // Getting the size of a Set
-// console.log(uniqueNumbers.size);
+console.log(uniqueNumbers.size);
 
 //--------------------------------------------------------------------
 
@@ -138,6 +138,7 @@
 // myMap.set(6, 6);
 
 // myMap.size
+
 // console.log(myMap.size);
 
 // myMap.values

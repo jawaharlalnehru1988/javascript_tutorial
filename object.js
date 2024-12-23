@@ -20,21 +20,55 @@
 //Object.entries() - Returns an array of enumerable [key, value] pairs of an object.
 
 // const entries = Object.entries(person);
-// console.log('entries :', entries);
+// for (const [key, value] of entries) {
+//     console.log(`${key} : ${value}`);
+// }
 
 //---------------------------------------------------------------
 
 //Object.assign() - Copies the values of all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
 
 
-// const target = { a: 1, b: 2 };
-// const source1 = { c: 3, d: 4 };
+// const target = { a: 1, b: 2, c: 3 };
+// const source1 = { c: 4, d: 4 };
 // const source2 = { e: 5, f: 6 };
 
 // const result = Object.assign(target, source1, source2);
 // console.log('result :', result);
 
 //---------------------------------------------------------------
+
+// shallow copy of an object
+
+// const person = {
+//     name: "Ram",
+//     age: 30,
+//     city: "Bangalore",
+//     address: {city: "Bangalore", state: "Karnataka"}
+// };
+
+// // const shallowCopy = { ...person };
+// const shallowCopy = Object.assign({}, person);
+
+// shallowCopy.address.city = "Mysore";
+// console.log(person.address.city);
+
+
+//---------------------------------------------------------------
+// Deep copy of an object
+
+// const original = {
+//     name: "Ram",
+//     age: 30,
+//     address: { city: "Bangalore", state: "Karnataka" },
+// };
+
+// const deepCopy = JSON.parse(JSON.stringify(original));
+// deepCopy.address.city = "Mysore";
+// console.log(original.address.city);
+// console.log(deepCopy.address.city);
+
+
 
 // length of an Object - Returns the number of enumerable properties of an object.
 
@@ -48,6 +82,25 @@
 // console.log('length :', length);
 
 //---------------------------------------------------------------
+
+// convert an object to new Map();
+
+// const obj = { a: 1, b: 2, c: 3 };
+
+// const map = new Map(Object.entries(obj));
+// console.log('map :', map);
+
+
+//---------------------------------------------------------------
+// convert an array as an object
+// const arr = [
+//     ["name", "Ram"],
+//     ["age", 30],
+//     ["city", "Bangalore"],
+// ];
+
+// const obj = Object.fromEntries(arr);
+// console.log('obj :', obj);
 
 //Object.freeze() - Prevents modifications to existing properties and prevents the addition of new properties.
 
@@ -68,23 +121,23 @@
 
 //---------------------------------------------------------------
 
-//Object.seal() - Prevents modifications to existing properties, but allows the addition of new properties.
+//Object.seal() - Allows modifications to existing properties, but prevents the addition of new properties.
 
 
-const obj = { name: "Ram", age: 30 };
-console.log('obj :', obj);
+// const obj = { name: "Ram", age: 30 };
+// console.log('obj :', obj);
 
-Object.seal(obj);
+// Object.seal(obj);
 
-obj.age = 35; 
-console.log(obj.age); 
-console.log('obj :', obj);
+// obj.age = 35; 
+// console.log(obj.age); 
+// console.log('obj :', obj);
 
-obj.city = "Bangalore"; 
-console.log(obj.city); 
+// obj.city = "Bangalore"; 
+// console.log(obj.city); 
 
-delete obj.name; 
-console.log(obj.name); 
+// delete obj.name; 
+// console.log(obj.name); 
 
 
 //---------------------------------------------------------------
@@ -213,7 +266,7 @@ console.log(obj.name);
 
 // greet.apply(person, ["Hello", "!"]);
 
-//Object.hasOwn(obj, prop)
+// Object.hasOwn(obj, prop)
 
 
 // const person = {
@@ -298,8 +351,6 @@ console.log(obj.name);
 // Object.setPrototypeOf(dog, animal);
 
 // console.log(dog.makeSound()); 
-
-
 // Object.getPrototypeOf(dog);
 
 
@@ -330,5 +381,3 @@ console.log(obj.name);
 // console.log(car.hasWheels);
 
 // console.log(Object.getPrototypeOf(car) === vehicle);
-
-
