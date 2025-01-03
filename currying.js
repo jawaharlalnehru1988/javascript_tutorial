@@ -71,13 +71,13 @@
 
 //--------------------------------------------
 
-// function curriedSubtract(a) {
-//     return function(b) {
-//         return function(c) {
-//             return a - b - c;
-//         };
-//     };
-// }
-// const subtractBy2 = curriedSubtract(2); // First call with 2
-// const subtractBy2And3 = subtractBy2(3); // Second call with 3
+function curriedSubtract(a) {
+    return function(b) {
+        return function(c) {
+            return a - b - c;
+        };
+    };
+}
+const subtractBy2 = curriedSubtract(2); // First call with 2
+const subtractBy2And3 = subtractBy2(3); // Second call with 3
 // console.log(subtractBy2And3(4)); // Output: -5

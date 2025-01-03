@@ -1742,13 +1742,16 @@
 
 //--------------------------------------------------
 // Index Out of Range
-// const items = ['pen', 'pencil', 'eraser'];
+// const animals = ['lion', 'elephant', 'tiger', 'zebra', 'giraffe' ];
 // try {
-//     const updatedAnimals = animals.with(5, 'elephant');
-//     console.log('updatedAnimals :', updatedAnimals);
-//   } catch (error) {
-//     console.error(error.message); 
+//   if(4 >= animals.length){
+//     throw new Error('Index out of bounds');
+//   } else {
+//     console.log(animals.with(4, 'monkey'));
 //   }
+// } catch (error) {
+//   console.error(error.message); 
+// }
 
 //--------------------------------------------------
 //--------------------------------------------------
@@ -1772,10 +1775,17 @@
 //--------------------------------------------------
 // 3. Out-of-Bounds Indices
 
-// const items = ['pen', 'pencil', 'eraser'];
-
+// const items = ['pen', 'pencil', 'eraser', 'ruler', 'sharpener', 'highlighter'];
+// console.log(items.at(2));
 // try {
-//     console.log(items.at(5)); 
+//     // console.log(items.at(1)); 
+//     // throw new Error('Index out of bounds');
+//     if(items.at(5) === undefined){
+//         throw new Error('Index out of bounds');
+//     }
+//     else{
+//         console.log(items.at(5));
+//     }
 //   } catch (error) {
 //     console.error(error.message); 
 //   }  

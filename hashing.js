@@ -57,38 +57,38 @@ console.log(uniqueNumbers.size);
 //--------------------------------------------------------------------
 
 // Removing duplicate Characters from a String
-// function removeDuplicates(str){
-//     return Array.from(new Set(str)).join('');
-// }
+function removeDuplicates(str){
+    return Array.from(new Set(str)).join('');
+}
 
-// // Example usage
-// const str = 'banana';
-// console.log(removeDuplicates(str));
+// Example usage
+const str = 'banana';
+console.log(removeDuplicates(str));
 
 //--------------------------------------------------------------------
 
 // Understanding the new Map() constructor
 
 // Creating a Map
-// const myMap = new Map();
-//     myMap.set('name', 'John Doe');
-//     myMap.set('age', 30);
-//     myMap.set('isStudent', false);
-//     myMap.set('scores', [80, 85, 90]);
-//     myMap.set('address', {
-//         city: 'New York',
-//         country: 'USA'
-//     });
-//     myMap.set('dob', new Date(1990, 1, 1));
-//     myMap.set('getFullName', function(){
-//         return this.get('name');
-//     });
+const myMap = new Map();
+    myMap.set('name', 'John Doe');
+    myMap.set('age', 30);
+    myMap.set('isStudent', false);
+    myMap.set('scores', [80, 85, 90]);
+    myMap.set('address', {
+        city: 'New York',
+        country: 'USA'
+    });
+    myMap.set('dob', new Date(1990, 1, 1));
+    myMap.set('getFullName', function(){
+        return this.get('name');
+    });
 
-// console.log('myMap :', myMap);
-// for (const [key, element] of myMap.entries()) {
-//     console.log(`${key} : ${element}`);
+console.log('myMap :', myMap);
+for (const [key, element] of myMap.entries()) {
+    console.log(`${key} : ${element}`);
     
-// }
+}
 
 //--------------------------------------------------------------------
 
