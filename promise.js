@@ -1,17 +1,17 @@
-let promise = new Promise((resolve, reject) => {
-    let success = true;
-    if(success){
-        resolve("successfully load");
-    } else {
-        reject(new Error("some error occurred"));
-    }
-});
+// let promise = new Promise((resolve, reject) => {
+//     let success = true;
+//     if(success){
+//         resolve("successfully load");
+//     } else {
+//         reject(new Error("some error occurred"));
+//     }
+// });
 
-promise.then(result => {
-    console.log('result :', result);
-}).catch(error => {
-    console.log('error :', error.message);
-});
+// promise.then(result => {
+//     console.log('result :', result);
+// }).catch(error => {
+//     console.log('error :', error.message);
+// });
 
 //Example 2:  Chaining Promises
 
@@ -35,20 +35,20 @@ promise.then(result => {
 
 // Example 3: Error Handling with catch
 
-// const promise = new Promise((resolve, reject)=>{
-//     let success = false;
-//     if(success){
-//         resolve("Success!");
-//     } else {
-//         reject("An error occured")
-//     }
-// });
+const promise = new Promise((resolve, reject)=>{
+    let success = false;
+    if(success){
+        resolve("Success!");
+    } else {
+        reject("An error occured")
+    }
+});
 
-// promise.then(result=>{
-// console.log('result :', result);
-// }).catch(error=>{
-// console.log('error :', error);
-// });
+promise.then(result=>{
+console.log('result :', result);
+}).catch(error=>{
+console.log('error :', error);
+});
 
 //Example 4:  Promise.all
 
