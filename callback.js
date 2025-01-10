@@ -40,8 +40,8 @@
 // function displayMessage(callback) {
 //     console.log("Fetching data...");
 //     setTimeout(() => {
-//         console.log("Data received!");
 //         callback();
+//         console.log("Data received!");
 //     }, 2000); 
 // }
 
@@ -70,7 +70,7 @@
 //---------------------------------
 
 // function fetchData(url, callback) {
-//     const success = true; // Simulating success or failure
+//     const success = false; // Simulating success or failure
 //     if (success) {
 //         callback(null, { data: "Sample Data" });
 //     } else {

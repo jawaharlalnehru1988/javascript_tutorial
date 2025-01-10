@@ -229,22 +229,22 @@
 //---------------------------------------------------------------
 
 // In Constructor Functions and classes
-class Counter {
-    constructor() {
-        this.count = 0;
-        this.increment = this.increment.bind(this); // Binding `this` to the instance
-    }
+// class Counter {
+//     constructor() {
+//         this.count = 0;
+//         this.increment = this.increment.bind(this); // Binding `this` to the instance
+//     }
 
-    increment() {
-        this.count++;
-        console.log(this.count);
-    }
-}
+//     increment() {
+//         this.count++;
+//         console.log(this.count);
+//     }
+// }
 
-const counter = new Counter();
-const incrementFn = counter.increment;
+// const counter = new Counter();
+// const incrementFn = counter.increment;
 
-incrementFn(); 
+// incrementFn(); 
 
 
 //---------------------------------------------------------------
